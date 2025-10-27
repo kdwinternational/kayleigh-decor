@@ -1,0 +1,73 @@
+SKU,Product Name,Product Description,Short Description,Regular Price,Sale Price,Categories,Tags,Images,Stock Status,Stock Quantity,Weight,Length,Width,Height,Lead Time (days),Fabric Type,Motor Brand,Product Type,Virtual,Downloadable,Manage Stock,Sold Individually,Backorders,Featured,Catalog Visibility,Purchase Note,Menu Order,Comment Status,Ping Status,Date Sale Price From,Date Sale Price To,Tax Status,Tax Class,Download Limit,Download Expiry days,Parent,Grouped Products,Upsells,Cross-Sells,External URL,Button Text,Position,Attribute 1 Name,Attribute 1 Value(s),Attribute 1 Visible,Attribute 1 Global,Attribute 2 Name,Attribute 2 Value(s),Attribute 2 Visible,Attribute 2 Global,Attribute 3 Name,Attribute 3 Value(s),Attribute 3 Visible,Attribute 3 Global,Download 1 Name,Download 1 URL,Download 2 Name,Download 2 URL,Download 3 Name,Download 3 URL
+
+# EXAMPLE PRODUCTS - Delete these rows and add your own products
+# Motorised Blinds Example
+MB-001,Motorised Roller Blind - Premium White,"Transform your space with our premium motorised roller blinds. Made in East London with quality materials and reliable motors. Perfect for modern homes seeking convenience and style. Features whisper-quiet operation, remote control included, and compatibility with smart home systems. Factory-direct pricing with 2-year motor warranty. Block-out fabric ensures complete privacy and light control. Professional installation available nationwide.","Whisper-quiet motorised blind with remote control and smart home compatibility",1299.00,,motorised-blinds,"motorised, automated, roller blind, block-out, remote control",motorised-blind-white-01.webp,instock,10,3.5,120,5,5,14,Block-out Premium,SmartMotion Motor,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Width,60-240 cm,1,1,Drop,120-300 cm,1,1,Control Type,"Remote Control|App Control|Voice Control",1,1,,,,,,,,,
+
+# Manual Blinds Example  
+MB-002,Manual Venetian Blind - Wood Effect,"Classic wooden venetian blinds crafted in our East London factory. Real wood effect with natural grain finish. Perfect for traditional and contemporary homes. Easy tilt control for precise light management. Available in multiple wood finishes. Factory-direct quality at unbeatable prices. Child-safe cord operation with breakaway safety features. Ideal for living rooms, bedrooms, and kitchens. Professional measuring service available.","Real wood effect venetian blind with easy tilt control",599.00,,manual-blinds,"venetian, wooden, manual, tilt control",venetian-blind-wood-01.webp,instock,15,2.8,120,3,3,10,Wood Effect PVC,Manual Cord,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Width,30-180 cm,1,1,Drop,60-240 cm,1,1,Wood Finish,"Oak|Walnut|White|Cherry",1,1,,,,,,,,,
+
+# Curtains Example
+CU-001,Custom Block-Out Curtains - Charcoal,"Luxury block-out curtains custom-made in East London. Premium fabric with thermal insulation properties. Perfect for bedrooms and media rooms. Professional finishing with weighted hems and quality linings. Multiple hanging options available. Factory-direct pricing with custom sizing. Blocks 99% of light and reduces noise. Machine washable for easy maintenance. Complete measuring and installation service available.","Premium block-out curtains with thermal insulation",899.00,,curtains,"block-out, thermal, custom, luxury",curtains-charcoal-01.webp,instock,8,4.2,,,,12,Premium Block-out,None,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Width,100-400 cm,1,1,Drop,120-350 cm,1,1,Colour,"Charcoal|Navy|Grey|Beige",1,1,Hanging Style,"Eyelet|Tab Top|Pencil Pleat",1,1,,,,,,,,,
+
+# Flooring Example
+FL-001,Luxury Vinyl Plank - Oak Effect,"Waterproof luxury vinyl planks with authentic oak wood effect. Perfect for South African homes with high humidity. Easy click-lock installation system. Scratch and stain resistant surface. Underlay attached for comfort and noise reduction. Available in multiple wood species. Factory-direct pricing with bulk discounts. Ideal for kitchens, bathrooms, and living areas. Professional installation service available nationwide.","Waterproof vinyl planks with authentic wood effect",149.99,,flooring,"vinyl, waterproof, click-lock, oak",vinyl-plank-oak-01.webp,instock,200,1.2,152,24,6,7,Waterproof Vinyl,None,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Length,152 cm,1,1,Width,24 cm,1,1,Thickness,4 mm,1,1,Wood Species,"Oak|Walnut|Grey Oak|White Oak",1,1,,,,,,,,,
+
+# Wallpaper Example
+WP-001,Modern Geometric Wallpaper - Gold,"Contemporary geometric wallpaper with metallic gold accents. Premium vinyl wallpaper with paste-the-wall application. Washable and fade-resistant finish. Perfect for feature walls and entire rooms. Pattern repeat 52cm for seamless matching. Factory-direct pricing with design consultation. Adds instant sophistication to any space. Professional installation service available. Sample swatches available on request.","Metallic geometric wallpaper with modern design",299.99,,wallpaper,"geometric, modern, metallic, feature wall",wallpaper-geometric-gold-01.webp,instock,25,0.8,1000,53,1,10,Vinyl Wallpaper,None,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Roll Length,10 m,1,1,Roll Width,53 cm,1,1,Pattern Repeat,52 cm,1,1,Colour,"Gold|Silver|Copper|Black",1,1,,,,,,,,,
+
+# Headboard Example
+HB-001,Upholstered Headboard - Linen Grey,"Custom upholstered headboard crafted in East London. Premium linen fabric with deep button tufting. Available in single, double, queen, and king sizes. Quality foam padding for comfort. Solid wood frame construction. Factory-direct pricing with custom options. Perfect for bedroom makeovers. Professional installation included. Fabric samples available on request.","Custom upholstered headboard with deep tufting",2499.00,,headboards,"upholstered, tufted, linen, custom",headboard-linen-grey-01.webp,instock,3,15,180,160,10,21,Premium Linen,None,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Bed Size,"Single|Double|Queen|King",1,1,Height,120 cm,1,1,Style,"Tufted|Panel|Plain",1,1,Colour,"Grey|Beige|Navy|Charcoal",1,1,,,,,,,,,
+
+# Pedestal Example
+PD-001,Bedside Pedestal - Modern White,"Contemporary bedside pedestal with clean lines. Quality MDF construction with durable white finish. Soft-close drawer mechanism. Open shelf for books and accessories. Cable management hole for charging devices. Factory-direct furniture from East London. Easy assembly with included instructions. Perfect for modern bedrooms. Matching bedroom furniture available.","Modern white bedside pedestal with soft-close drawer",699.00,,pedestals,"bedside, modern, white, drawer",pedestal-modern-white-01.webp,instock,8,8,45,40,55,14,MDF with Paint,Soft-Close,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Width,40 cm,1,1,Height,55 cm,1,1,Depth,45 cm,1,1,Finish,"White|Oak|Walnut|Grey",1,1,,,,,,,,,
+
+# Sofa Example
+SF-001,3-Seater Fabric Sofa - Navy Blue,"Comfortable 3-seater sofa upholstered in durable navy fabric. Quality foam cushions with spring support. Solid wood frame with 5-year warranty. Removable cushion covers for easy cleaning. Available in multiple colours and fabrics. Factory-direct pricing with custom options. Perfect for family living rooms. Professional delivery and assembly included. Fabric protection treatment available.","Quality 3-seater sofa with removable covers",8999.00,,sofas,"3-seater, fabric, navy, removable covers",sofa-navy-3seater-01.webp,instock,2,35,200,85,75,28,Durable Fabric,None,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Seats,3,1,1,Width,200 cm,1,1,Height,85 cm,1,1,Depth,75 cm,1,1,Colour,"Navy|Grey|Beige|Charcoal",1,1,Configuration,"3-Seater|L-Shape|Corner",1,1,,,,,,,,,
+
+# Scatter Cushions Example
+SC-001,Decorative Scatter Cushions - Set of 2,"Premium scatter cushion set with removable covers. Quality feather-filled inserts for ultimate comfort. Available in multiple designer fabrics and colours. Perfect for sofas, beds, and accent chairs. Factory-direct pricing with custom options. Machine washable covers for easy maintenance. Mix and match colours for personalised style.","Set of 2 decorative scatter cushions with feather inserts",399.99,,scatter-cushions,"scatter cushions, decorative, feather, set",scatter-cushions-set-01.webp,instock,20,1.5,45,45,15,5,Designer Fabric,Feather Fill,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Size,45x45 cm,1,1,Fill,Feather,1,1,Quantity,Set of 2,1,1,Pattern,"Plain|Striped|Geometric|Floral",1,1,Colour,"Multi|Blue|Green|Neutral",1,1,,,,,,,,,
+
+# Security Gate Example
+SG-001,Retractable Security Gate - White,"Heavy-duty retractable security gate for doors and windows. Powder-coated steel construction with white finish. Smooth sliding mechanism with multiple locking points. Custom sizing available for perfect fit. Factory-direct security solutions from East London. Professional installation included. Enhances home security while maintaining aesthetics. Suitable for residential and commercial properties.","Retractable security gate with multi-point locking",3499.00,,security-gates,"security gate, retractable, steel, locking",security-gate-white-01.webp,instock,5,18,120,200,5,14,Powder-Coated Steel,Multi-Point,simple,,,yes,no,notify,no,visible,,0,open,open,,,taxable,standard,,,,,,,,,,,,Width,120 cm,1,1,Height,200 cm,1,1,Type,Retractable,1,1,Finish,"White|Bronze|Black",1,1,Locking System,"Multi-Point|Single Lock",1,1,,,,,,,,,
+
+# COLUMN EXPLANATIONS - Keep this section for reference, don't include in final CSV
+# SKU: Unique product code (e.g., MB-001 for Motorised Blind 001)
+# Product Name: Full product name as displayed to customers
+# Product Description: Detailed description for product page
+# Short Description: Brief description for product listings
+# Regular Price: Normal selling price (in Rands)
+# Sale Price: Discounted price (leave blank if no sale)
+# Categories: WooCommerce category slugs (comma-separated)
+# Tags: Search tags (comma-separated)
+# Images: Main product image filename (upload to Media Library first)
+# Stock Status: instock/outofstock/onbackorder
+# Stock Quantity: Number of items in stock
+# Weight: Product weight in kg
+# Length/Width/Height: Product dimensions in cm
+# Lead Time (days): Custom field for delivery time
+# Fabric Type: Custom field for material/fabric
+# Motor Brand: Custom field for motorised products
+# Product Type: simple/variable/grouped/external
+# Virtual: yes/no (for digital products)
+# Downloadable: yes/no (for digital products)
+# Manage Stock: yes/no (track inventory)
+# Sold Individually: yes/no (one per order)
+# Backorders: yes/no/notify (allow backorders)
+# Featured: yes/no (featured product)
+# Catalog Visibility: visible/catalog/search/hidden
+# Purchase Note: Message sent after purchase
+# Menu Order: Display order in lists
+# Comment Status: open/closed (product reviews)
+# Ping Status: open/closed
+# Date Sale Price From/To: Sale period dates
+# Tax Status: taxable/shipping/none
+# Tax Class: standard/reduced/zero
+# Download Limit/Expiry: For digital products
+# Parent: For variable products
+# Grouped Products: For grouped products
+# Upsells/Cross-Sells: Related product SKUs (comma-separated)
+# External URL/Button Text: For external products
+# Position: Menu order
+# Attributes 1-3: Product variations (name, values, visible, global)
+# Downloads 1-3: For downloadable products
