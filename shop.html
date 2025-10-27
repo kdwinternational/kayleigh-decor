@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop premium blinds, curtains, flooring and home decor direct from our East London factory. Factory-direct prices with country-wide delivery.">
+    <title>Shop Factory-Direct Home Decor | Kayleigh Decor Warehouse</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kayleigh.co.za/shop.html">
+    <meta property="og:title" content="Shop Factory-Direct Home Decor | Kayleigh Decor Warehouse">
+    <meta property="og:description" content="Premium blinds, curtains, flooring and home decor direct from our East London factory. Quality products at factory prices.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --kayleigh-black: #111111;
+            --kayleigh-beige: #D4B896;
+            --kayleigh-white: #F5F5F5;
+            --kayleigh-gold: #C9A227;
+            --kayleigh-dark-grey: #333333;
+            --kayleigh-light-grey: #888888;
+            --kayleigh-success: #28a745;
+            --kayleigh-warning: #ffc107;
+            --kayleigh-danger: #dc3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--kayleigh-black);
+            background-color: var(--kayleigh-white);
+            font-size: 16px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-gold);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cart-icon {
+            position: relative;
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--kayleigh-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: var(--kayleigh-beige);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--kayleigh-dark-grey);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Shop Layout */
+        .shop-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 2rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: var(--kayleigh-white);
+            border-radius: 8px;
+            padding: 1.5rem;
+            height: fit-content;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .sidebar-section {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--kayleigh-gold);
+        }
+
+        /* Category Filter */
+        .category-filters {
+            list-style: none;
+        }
+
+        .category-filters li {
+            margin-bottom: 0.5rem;
+        }
+
+        .filter-btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: none;
+            border: 1px solid var(--kayleigh-light-grey);
+            border-radius: 4px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border-color: var(--kayleigh-gold);
+        }
+
+        /* Sort Options */
+        .sort-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--kayleigh-light-grey);
+            border-radius: 4px;
+            background: var(--kayleigh-white);
+            font-size: 0.9rem;
+        }
+
+        /* Shipping Calculator */
+        .shipping-calculator {
+            background: var(--kayleigh-beige);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .shipping-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .shipping-input {
+            padding: 0.75rem;
+            border: 1px solid var(--kayleigh-light-grey);
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .shipping-btn {
+            padding: 0.75rem;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .shipping-btn:hover {
+            background: #B8921F;
+        }
+
+        /* Main Content */
+        .main-content {
+            min-height: 600px;
+        }
+
+        /* Products Grid */
+        .products-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--kayleigh-beige);
+        }
+
+        .products-count {
+            color: var(--kayleigh-light-grey);
+            font-size: 0.9rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: var(--kayleigh-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            background: var(--kayleigh-light-grey);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--kayleigh-white);
+            position: relative;
+        }
+
+        .lead-time-badge {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--kayleigh-black);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .product-description {
+            color: var(--kayleigh-light-grey);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--kayleigh-gold);
+            margin-bottom: 1rem;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .product-features li {
+            font-size: 0.8rem;
+            color: var(--kayleigh-dark-grey);
+            margin-bottom: 0.25rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .product-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--kayleigh-success);
+            font-weight: bold;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .btn {
+            padding: 0.75rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            flex: 1;
+        }
+
+        .btn-primary:hover {
+            background: #B8921F;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 0.75rem;
+            min-width: 40px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--kayleigh-dark-grey);
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--kayleigh-light-grey);
+        }
+
+        .loading i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--kayleigh-light-grey);
+        }
+
+        .empty-state i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .empty-state h3 {
+            margin-bottom: 1rem;
+            color: var(--kayleigh-dark-grey);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--kayleigh-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--kayleigh-dark-grey);
+            color: var(--kayleigh-light-grey);
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Chat */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-chat:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--kayleigh-black);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .shop-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .sidebar {
+                order: 2;
+            }
+
+            .main-content {
+                order: 1;
+            }
+
+            .products-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .product-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">Kayleigh Decor</a>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Shop Factory-Direct</h1>
+            <p class="page-subtitle">Premium home decor direct from our East London factory. Quality products at unbeatable prices with country-wide delivery.</p>
+        </div>
+    </section>
+
+    <!-- Shop Container -->
+    <div class="shop-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Shipping Calculator -->
+            <div class="shipping-calculator">
+                <h3 class="sidebar-title">Delivery Cost</h3>
+                <form class="shipping-form" id="shippingCalculator">
+                    <input type="text" class="shipping-input" id="deliveryPostcode" placeholder="Your postcode (e.g. 5247)" maxlength="4" pattern="[0-9]{4}" required>
+                    <button type="submit" class="shipping-btn">Calculate</button>
+                </form>
+                <div id="shippingResult"></div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Categories</h3>
+                <ul class="category-filters">
+                    <li><button class="filter-btn active" data-filter="all">All Products</button></li>
+                    <li><button class="filter-btn" data-filter="motorised-blinds">Motorised Blinds</button></li>
+                    <li><button class="filter-btn" data-filter="manual-blinds">Manual Blinds</button></li>
+                    <li><button class="filter-btn" data-filter="curtains">Curtains</button></li>
+                    <li><button class="filter-btn" data-filter="flooring">Flooring</button></li>
+                    <li><button class="filter-btn" data-filter="wallpaper">Wallpaper</button></li>
+                    <li><button class="filter-btn" data-filter="headboards">Headboards</button></li>
+                    <li><button class="filter-btn" data-filter="pedestals">Pedestals</button></li>
+                    <li><button class="filter-btn" data-filter="sofas">Sofas</button></li>
+                    <li><button class="filter-btn" data-filter="scatter-cushions">Scatter Cushions</button></li>
+                    <li><button class="filter-btn" data-filter="security-gates">Security Gates</button></li>
+                </ul>
+            </div>
+
+            <!-- Sort Options -->
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Sort By</h3>
+                <select class="sort-select" id="productSort">
+                    <option value="">Default</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Name A-Z</option>
+                    <option value="lead-time">Lead Time</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Products Header -->
+            <div class="products-header">
+                <div class="products-count" id="productsCount">Loading products...</div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <div class="loading">
+                    <i class="fas fa-spinner"></i>
+                    <p>Loading products...</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> 043 743 2380</p>
+                <p><i class="fab fa-whatsapp"></i> 084 219 1002</p>
+                <p><i class="fas fa-envelope"></i> decorating@kayleigh.co.za</p>
+                <p><i class="fas fa-map-marker-alt"></i> 66a Fleet Street, Quigney, East London, 5201</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="free-measurement.html">Free Measurement</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <a href="delivery.html">Delivery Information</a>
+                <a href="returns.html">Returns Policy</a>
+                <a href="installation.html">Installation Services</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kayleigh Decor Warehouse. All rights reserved. | Factory-direct quality from East London, South Africa</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/27842191002" class="whatsapp-chat" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Shop-specific functionality
+        class ShopPage {
+            constructor() {
+                this.currentFilter = 'all';
+                this.currentSort = '';
+                this.products = [];
+                this.init();
+            }
+
+            init() {
+                this.loadProducts();
+                this.initFilters();
+                this.initSort();
+            }
+
+            async loadProducts() {
+                try {
+                    // Get all products from the database
+                    this.products = Object.values(productDatabase).flat();
+                    this.renderProducts();
+                    this.updateProductCount();
+                } catch (error) {
+                    console.error('Error loading products:', error);
+                    this.showError();
+                }
+            }
+
+            renderProducts() {
+                const container = document.getElementById('productsGrid');
+                
+                if (this.products.length === 0) {
+                    container.innerHTML = this.getEmptyState();
+                    return;
+                }
+
+                container.innerHTML = this.products.map(product => `
+                    <div class="product-card" data-category="${product.category}" data-price="${product.price}" data-name="${product.name}" data-leadtime="${product.leadTime}">
+                        <div class="product-image">
+                            <div class="placeholder-icon">
+                                <i class="fas fa-${this.getCategoryIcon(product.category)}"></i>
+                            </div>
+                            <div class="lead-time-badge">${store.formatLeadTime(product.leadTime)}</div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-price">${store.formatPrice(product.price)}</div>
+                            <ul class="product-features">
+                                ${product.features.map(feature => `<li>${feature}</li>`).join('')}
+                            </ul>
+                            <div class="product-actions">
+                                <button class="btn btn-primary" onclick="shopPage.addToCart('${product.id}')">
+                                    <i class="fas fa-cart-plus"></i> Add to Cart
+                                </button>
+                                <button class="btn btn-secondary" onclick="shopPage.quickView('${product.id}')" title="Quick View">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            getCategoryIcon(category) {
+                const icons = {
+                    'motorised-blinds': 'cogs',
+                    'manual-blinds': 'sliders-h',
+                    'curtains': 'columns',
+                    'flooring': 'th-large',
+                    'wallpaper': 'image',
+                    'headboards': 'bed',
+                    'pedestals': 'table',
+                    'sofas': 'couch',
+                    'scatter-cushions': 'square',
+                    'security-gates': 'shield-alt'
+                };
+                return icons[category] || 'box';
+            }
+
+            addToCart(productId) {
+                const product = this.products.find(p => p.id === productId);
+                if (product) {
+                    store.addToCart(product);
+                }
+            }
+
+            quickView(productId) {
+                const product = this.products.find(p => p.id === productId);
+                if (product) {
+                    this.showQuickViewModal(product);
+                }
+            }
+
+            showQuickViewModal(product) {
+                const modal = document.createElement('div');
+                modal.className = 'modal-overlay';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>${product.name}</h2>
+                            <button class="modal-close" onclick="this.closest('.modal-overlay').remove()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="quick-view-image">
+                                <div class="placeholder-icon large">
+                                    <i class="fas fa-${this.getCategoryIcon(product.category)}"></i>
+                                </div>
+                            </div>
+                            <div class="quick-view-details">
+                                <div class="quick-view-price">${store.formatPrice(product.price)}</div>
+                                <div class="quick-view-lead-time">Lead time: ${store.formatLeadTime(product.leadTime)}</div>
+                                <p class="quick-view-description">${product.description}</p>
+                                <ul class="quick-view-features">
+                                    ${product.features.map(feature => `<li><i class="fas fa-check"></i> ${feature}</li>`).join('')}
+                                </ul>
+                                <div class="quick-view-actions">
+                                    <button class="btn btn-primary" onclick="shopPage.addToCart('${product.id}'); this.closest('.modal-overlay').remove();">
+                                        <i class="fas fa-cart-plus"></i> Add to Cart
+                                    </button>
+                                    <a href="product.html?id=${product.id}" class="btn btn-secondary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(modal);
+                
+                // Add modal styles
+                const modalStyles = `
+                    .modal-overlay {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: rgba(0,0,0,0.5);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 2000;
+                        padding: 2rem;
+                    }
+                    
+                    .modal-content {
+                        background: var(--kayleigh-white);
+                        border-radius: 8px;
+                        max-width: 800px;
+                        width: 100%;
+                        max-height: 90vh;
+                        overflow-y: auto;
+                    }
+                    
+                    .modal-header {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 1.5rem;
+                        border-bottom: 1px solid var(--kayleigh-beige);
+                    }
+                    
+                    .modal-close {
+                        background: none;
+                        border: none;
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        color: var(--kayleigh-light-grey);
+                    }
+                    
+                    .modal-body {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 2rem;
+                        padding: 1.5rem;
+                    }
+                    
+                    .quick-view-image {
+                        background: var(--kayleigh-light-grey);
+                        border-radius: 8px;
+                        height: 300px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                    .quick-view-price {
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                        color: var(--kayleigh-gold);
+                        margin-bottom: 0.5rem;
+                    }
+                    
+                    .quick-view-lead-time {
+                        color: var(--kayleigh-dark-grey);
+                        margin-bottom: 1rem;
+                    }
+                    
+                    .quick-view-features {
+                        list-style: none;
+                        margin: 1rem 0;
+                    }
+                    
+                    .quick-view-features li {
+                        margin-bottom: 0.5rem;
+                        color: var(--kayleigh-dark-grey);
+                    }
+                    
+                    .quick-view-features i {
+                        color: var(--kayleigh-success);
+                        margin-right: 0.5rem;
+                    }
+                    
+                    .quick-view-actions {
+                        display: flex;
+                        gap: 1rem;
+                        margin-top: 2rem;
+                    }
+                    
+                    @media (max-width: 768px) {
+                        .modal-body {
+                            grid-template-columns: 1fr;
+                        }
+                        
+                        .quick-view-actions {
+                            flex-direction: column;
+                        }
+                    }
+                `;
+                
+                if (!document.getElementById('modal-styles')) {
+                    const styleSheet = document.createElement('style');
+                    styleSheet.id = 'modal-styles';
+                    styleSheet.textContent = modalStyles;
+                    document.head.appendChild(styleSheet);
+                }
+            }
+
+            initFilters() {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                
+                filterButtons.forEach(button => {
+                    button.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const filter = button.dataset.filter;
+                        
+                        // Update active button
+                        filterButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        this.currentFilter = filter;
+                        this.filterProducts();
+                    });
+                });
+            }
+
+            initSort() {
+                const sortSelect = document.getElementById('productSort');
+                
+                if (sortSelect) {
+                    sortSelect.addEventListener('change', (e) => {
+                        this.currentSort = e.target.value;
+                        this.sortProducts();
+                    });
+                }
+            }
+
+            filterProducts() {
+                const productCards = document.querySelectorAll('.product-card');
+                let visibleCount = 0;
+                
+                productCards.forEach(card => {
+                    const category = card.dataset.category;
+                    const shouldShow = this.currentFilter === 'all' || category === this.currentFilter;
+                    
+                    if (shouldShow) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                        // Re-trigger animation
+                        card.style.animation = 'none';
+                        setTimeout(() => {
+                            card.style.animation = 'fadeIn 0.5s ease forwards';
+                        }, 10);
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                this.updateProductCount(visibleCount);
+            }
+
+            sortProducts() {
+                const container = document.querySelector('.products-grid');
+                const productCards = Array.from(container.querySelectorAll('.product-card'));
+                
+                // Only sort visible products
+                const visibleProducts = productCards.filter(card => card.style.display !== 'none');
+                
+                visibleProducts.sort((a, b) => {
+                    switch (this.currentSort) {
+                        case 'price-low':
+                            return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                        case 'price-high':
+                            return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+                        case 'name':
+                            return a.dataset.name.localeCompare(b.dataset.name);
+                        case 'lead-time':
+                            return parseInt(a.dataset.leadtime) - parseInt(b.dataset.leadtime);
+                        default:
+                            return 0;
+                    }
+                });
+                
+                // Re-append sorted products
+                visibleProducts.forEach(card => container.appendChild(card));
+            }
+
+            updateProductCount(count = null) {
+                const countElement = document.getElementById('productsCount');
+                if (countElement) {
+                    if (count === null) {
+                        count = document.querySelectorAll('.product-card[style*="block"], .product-card:not([style*="none"])').length;
+                    }
+                    
+                    const total = this.products.length;
+                    if (this.currentFilter === 'all') {
+                        countElement.textContent = `Showing all ${total} products`;
+                    } else {
+                        const categoryName = this.currentFilter.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase());
+                        countElement.textContent = `Showing ${count} of ${total} products (${categoryName})`;
+                    }
+                }
+            }
+
+            showError() {
+                const container = document.getElementById('productsGrid');
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h3>Something went wrong</h3>
+                        <p>Unable to load products. Please try again later or contact us on WhatsApp.</p>
+                        <a href="https://wa.me/27842191002" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Contact Us
+                        </a>
+                    </div>
+                `;
+            }
+        }
+
+        // Initialize shop page
+        let shopPage;
+        document.addEventListener('DOMContentLoaded', () => {
+            shopPage = new ShopPage();
+        });
+    </script>
+</body>
+</html>
