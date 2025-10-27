@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Kayleigh Decor Warehouse in East London. Factory-direct blinds, curtains, flooring. Call 043 743 2380 or WhatsApp 084 219 1002.">
+    <title>Contact Us | Kayleigh Decor Warehouse - East London</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kayleigh.co.za/contact.html">
+    <meta property="og:title" content="Contact Kayleigh Decor Warehouse | East London Factory-Direct">
+    <meta property="og:description" content="Get in touch with East London's factory-direct home decor specialists. Call 043 743 2380 or WhatsApp 084 219 1002.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --kayleigh-black: #111111;
+            --kayleigh-beige: #D4B896;
+            --kayleigh-white: #F5F5F5;
+            --kayleigh-gold: #C9A227;
+            --kayleigh-dark-grey: #333333;
+            --kayleigh-light-grey: #888888;
+            --kayleigh-success: #28a745;
+            --kayleigh-warning: #ffc107;
+            --kayleigh-danger: #dc3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--kayleigh-black);
+            background-color: var(--kayleigh-white);
+            font-size: 16px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-gold);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cart-icon {
+            position: relative;
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--kayleigh-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: var(--kayleigh-beige);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--kayleigh-dark-grey);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Contact Container */
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        /* Contact Info */
+        .contact-info {
+            background: var(--kayleigh-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--kayleigh-black);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--kayleigh-gold);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--kayleigh-beige);
+            border-radius: 8px;
+        }
+
+        .contact-icon {
+            color: var(--kayleigh-gold);
+            font-size: 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .contact-details h3 {
+            color: var(--kayleigh-black);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-details p {
+            color: var(--kayleigh-dark-grey);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details a {
+            color: var(--kayleigh-gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        /* Business Hours */
+        .business-hours {
+            background: var(--kayleigh-beige);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .business-hours h3 {
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .business-hours h3 i {
+            color: var(--kayleigh-gold);
+        }
+
+        .hours-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem;
+        }
+
+        .day-hours {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.25rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .day-hours:last-child {
+            border-bottom: none;
+        }
+
+        .day {
+            font-weight: 500;
+            color: var(--kayleigh-black);
+        }
+
+        .hours {
+            color: var(--kayleigh-dark-grey);
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            background: var(--kayleigh-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--kayleigh-black);
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--kayleigh-beige);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background: var(--kayleigh-white);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--kayleigh-gold);
+            box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.2);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            background: #B8921F;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+        }
+
+        .submit-btn:disabled {
+            background: var(--kayleigh-light-grey);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Map Section */
+        .map-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
+        }
+
+        .map-container {
+            background: var(--kayleigh-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background: var(--kayleigh-light-grey);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--kayleigh-white);
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .map-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--kayleigh-gold);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 3rem 0 1rem;
+            margin-top: 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--kayleigh-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--kayleigh-dark-grey);
+            color: var(--kayleigh-light-grey);
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Chat */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-chat:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--kayleigh-black);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+                padding: 2rem 1rem;
+                gap: 2rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hours-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .map-section {
+                padding: 0 1rem 2rem;
+            }
+        }
+
+        /* Success/Error Messages */
+        .alert {
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">Kayleigh Decor</a>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="page-subtitle">Get in touch with East London's factory-direct home decor specialists</p>
+        </div>
+    </section>
+
+    <!-- Contact Container -->
+    <div class="contact-container">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2 class="section-title">Get in Touch</h2>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Visit Our Factory</h3>
+                    <p>66a Fleet Street, Quigney</p>
+                    <p>East London, 5201</p>
+                    <p>Eastern Cape, South Africa</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Landline</h3>
+                    <p><a href="tel:0437432380">043 743 2380</a></p>
+                    <p style="font-size: 0.9rem; color: var(--kayleigh-light-grey);">Monday - Friday: 8:00 - 17:00</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/27842191002">084 219 1002</a></p>
+                    <p style="font-size: 0.9rem; color: var(--kayleigh-light-grey);">Quick responses for quotes & enquiries</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="contact-details">
+                    <h3>Email</h3>
+                    <p><a href="mailto:decorating@kayleigh.co.za">decorating@kayleigh.co.za</a></p>
+                    <p style="font-size: 0.9rem; color: var(--kayleigh-light-grey);">For detailed quotes and orders</p>
+                </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="business-hours">
+                <h3><i class="fas fa-clock"></i> Business Hours</h3>
+                <div class="hours-grid">
+                    <div class="day-hours">
+                        <span class="day">Monday - Friday:</span>
+                        <span class="hours">8:00 - 17:00</span>
+                    </div>
+                    <div class="day-hours">
+                        <span class="day">Saturday:</span>
+                        <span class="hours">8:00 - 13:00</span>
+                    </div>
+                    <div class="day-hours">
+                        <span class="day">Sunday:</span>
+                        <span class="hours">Closed</span>
+                    </div>
+                    <div class="day-hours">
+                        <span class="day">Public Holidays:</span>
+                        <span class="hours">Closed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-section">
+            <h2 class="section-title">Send us a Message</h2>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="firstName">First Name *</label>
+                        <input type="text" class="form-input" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="lastName">Last Name *</label>
+                        <input type="text" class="form-input" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email Address *</label>
+                        <input type="email" class="form-input" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Phone Number</label>
+                        <input type="tel" class="form-input" id="phone" name="phone">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="enquiryType">Enquiry Type *</label>
+                    <select class="form-select" id="enquiryType" name="enquiryType" required>
+                        <option value="">Select enquiry type</option>
+                        <option value="quote">Request a Quote</option>
+                        <option value="measurement">Book Free Measurement</option>
+                        <option value="product">Product Information</option>
+                        <option value="installation">Installation Service</option>
+                        <option value="existing-order">Existing Order</option>
+                        <option value="complaint">Complaint</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="subject">Subject *</label>
+                    <input type="text" class="form-input" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">Message *</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Please provide details about your enquiry..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+        <div class="map-container">
+            <h2 class="section-title">Find Us</h2>
+            <div class="map-placeholder">
+                <div>
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>66a Fleet Street, Quigney, East London</h3>
+                    <p>Visit our factory showroom to see our products and discuss your requirements.</p>
+                    <p><strong>Directions:</strong> Located in Quigney, just off Main Road. Look for the Kayleigh Decor Warehouse sign.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> 043 743 2380</p>
+                <p><i class="fab fa-whatsapp"></i> 084 219 1002</p>
+                <p><i class="fas fa-envelope"></i> decorating@kayleigh.co.za</p>
+                <p><i class="fas fa-map-marker-alt"></i> 66a Fleet Street, Quigney, East London, 5201</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="free-measurement.html">Free Measurement</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <a href="delivery.html">Delivery Information</a>
+                <a href="returns.html">Returns Policy</a>
+                <a href="installation.html">Installation Services</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kayleigh Decor Warehouse. All rights reserved. | Factory-direct quality from East London, South Africa</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/27842191002" class="whatsapp-chat" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Contact Page Functionality
+        class ContactPage {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.initContactForm();
+            }
+
+            initContactForm() {
+                const form = document.getElementById('contactForm');
+                if (form) {
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        this.handleFormSubmission(form);
+                    });
+                }
+            }
+
+            async handleFormSubmission(form) {
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Basic validation
+                if (!this.validateForm(data)) {
+                    return;
+                }
+
+                // Show loading state
+                const submitBtn = form.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+                try {
+                    // Simulate form submission
+                    await this.simulateFormSubmission(data);
+                    
+                    this.showSuccessMessage();
+                    form.reset();
+                    
+                } catch (error) {
+                    this.showErrorMessage();
+                    console.error('Form submission error:', error);
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+            }
+
+            validateForm(data) {
+                const requiredFields = ['firstName', 'lastName', 'email', 'enquiryType', 'subject', 'message'];
+                
+                for (let field of requiredFields) {
+                    if (!data[field] || data[field].trim() === '') {
+                        this.showAlert(`Please fill in the ${this.getFieldLabel(field)} field`, 'error');
+                        return false;
+                    }
+                }
+
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(data.email)) {
+                    this.showAlert('Please enter a valid email address', 'error');
+                    return false;
+                }
+
+                // Phone validation (if provided)
+                if (data.phone && data.phone.trim() !== '') {
+                    const phoneRegex = /^0[0-9]{9}$/;
+                    if (!phoneRegex.test(data.phone.replace(/\s/g, ''))) {
+                        this.showAlert('Please enter a valid South African phone number (e.g., 0821234567)', 'error');
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            getFieldLabel(field) {
+                const labels = {
+                    firstName: 'First Name',
+                    lastName: 'Last Name',
+                    email: 'Email Address',
+                    enquiryType: 'Enquiry Type',
+                    subject: 'Subject',
+                    message: 'Message'
+                };
+                return labels[field] || field;
+            }
+
+            async simulateFormSubmission(data) {
+                // Simulate API call delay
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        // Simulate success 90% of the time
+                        if (Math.random() > 0.1) {
+                            resolve({ success: true });
+                        } else {
+                            reject(new Error('Simulated error'));
+                        }
+                    }, 2000);
+                });
+            }
+
+            showSuccessMessage() {
+                const message = `
+                    <div class="success-content">
+                        <i class="fas fa-check-circle" style="color: var(--kayleigh-success); font-size: 2rem; margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--kayleigh-black); margin-bottom: 1rem;">Message Sent Successfully!</h4>
+                        <p style="color: var(--kayleigh-dark-grey); margin-bottom: 1rem;">Thank you for contacting us. We'll get back to you within 24 hours via your preferred contact method.</p>
+                        <p style="color: var(--kayleigh-light-grey); font-size: 0.9rem;">For urgent enquiries, please WhatsApp us on 084 219 1002</p>
+                    </div>
+                `;
+                this.showAlert(message, 'success');
+            }
+
+            showErrorMessage() {
+                const message = `
+                    <div class="error-content">
+                        <i class="fas fa-exclamation-circle" style="color: var(--kayleigh-danger); font-size: 2rem; margin-bottom: 1rem;"></i>
+                        <h4 style="color: var(--kayleigh-black); margin-bottom: 1rem;">Something went wrong</h4>
+                        <p style="color: var(--kayleigh-dark-grey);">Please try again or contact us directly on WhatsApp: 084 219 1002</p>
+                    </div>
+                `;
+                this.showAlert(message, 'error');
+            }
+
+            showAlert(message, type = 'info') {
+                // Remove existing alerts
+                const existingAlert = document.querySelector('.alert');
+                if (existingAlert) {
+                    existingAlert.remove();
+                }
+                
+                const alert = document.createElement('div');
+                alert.className = `alert alert-${type}`;
+                alert.innerHTML = message;
+                
+                const form = document.getElementById('contactForm');
+                form.parentNode.insertBefore(alert, form);
+                
+                // Auto-remove after 8 seconds
+                setTimeout(() => {
+                    if (alert.parentNode) {
+                        alert.remove();
+                    }
+                }, 8000);
+                
+                // Scroll to alert
+                alert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Initialize contact page
+        let contactPage;
+        document.addEventListener('DOMContentLoaded', () => {
+            contactPage = new ContactPage();
+        });
+    </script>
+</body>
+</html>
