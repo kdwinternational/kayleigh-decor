@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete your Kayleigh Decor Warehouse order. Secure checkout with Direct Bank Transfer (EFT) from East London factory.">
+    <title>Secure Checkout | Kayleigh Decor Warehouse</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kayleigh.co.za/checkout.html">
+    <meta property="og:title" content="Secure Checkout | Kayleigh Decor Warehouse">
+    <meta property="og:description" content="Complete your factory-direct home decor order with secure EFT payment from East London.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --kayleigh-black: #111111;
+            --kayleigh-beige: #D4B896;
+            --kayleigh-white: #F5F5F5;
+            --kayleigh-gold: #C9A227;
+            --kayleigh-dark-grey: #333333;
+            --kayleigh-light-grey: #888888;
+            --kayleigh-success: #28a745;
+            --kayleigh-warning: #ffc107;
+            --kayleigh-danger: #dc3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--kayleigh-black);
+            background-color: var(--kayleigh-white);
+            font-size: 16px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-gold);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cart-icon {
+            position: relative;
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--kayleigh-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: var(--kayleigh-beige);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--kayleigh-dark-grey);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Checkout Container */
+        .checkout-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Checkout Form */
+        .checkout-form-section {
+            background: var(--kayleigh-white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--kayleigh-black);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--kayleigh-gold);
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+        }
+
+        .form-section h3 {
+            font-size: 1.2rem;
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--kayleigh-black);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--kayleigh-beige);
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--kayleigh-gold);
+            box-shadow: 0 0 0 2px rgba(201, 162, 39, 0.2);
+        }
+
+        .form-input:invalid {
+            border-color: var(--kayleigh-danger);
+        }
+
+        .form-select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--kayleigh-beige);
+            border-radius: 4px;
+            font-size: 1rem;
+            background: var(--kayleigh-white);
+            cursor: pointer;
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--kayleigh-beige);
+            border-radius: 4px;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-checkbox input[type="checkbox"] {
+            margin: 0;
+        }
+
+        .form-checkbox label {
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Order Summary */
+        .order-summary {
+            background: var(--kayleigh-white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        .summary-items {
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--kayleigh-beige);
+        }
+
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+
+        .summary-item-name {
+            flex: 1;
+            font-size: 0.9rem;
+            color: var(--kayleigh-dark-grey);
+        }
+
+        .summary-item-quantity {
+            color: var(--kayleigh-light-grey);
+            font-size: 0.8rem;
+            margin: 0 0.5rem;
+        }
+
+        .summary-item-price {
+            font-weight: 500;
+            color: var(--kayleigh-black);
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--kayleigh-beige);
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--kayleigh-black);
+        }
+
+        .summary-label {
+            color: var(--kayleigh-dark-grey);
+        }
+
+        .summary-value {
+            color: var(--kayleigh-black);
+            font-weight: 500;
+        }
+
+        .summary-total {
+            font-size: 1.3rem;
+            color: var(--kayleigh-gold);
+            font-weight: 700;
+        }
+
+        /* Payment Section */
+        .payment-section {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--kayleigh-gold);
+        }
+
+        .payment-method {
+            background: var(--kayleigh-beige);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .payment-method h4 {
+            color: var(--kayleigh-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .payment-method p {
+            font-size: 0.9rem;
+            color: var(--kayleigh-dark-grey);
+            margin-bottom: 0.5rem;
+        }
+
+        .bank-details {
+            background: var(--kayleigh-white);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+
+        .bank-details p {
+            margin-bottom: 0.25rem;
+            color: var(--kayleigh-black);
+        }
+
+        /* Submit Button */
+        .submit-section {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--kayleigh-beige);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            background: #B8921F;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+        }
+
+        .submit-btn:disabled {
+            background: var(--kayleigh-light-grey);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Security Badges */
+        .security-badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--kayleigh-beige);
+            border-radius: 8px;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--kayleigh-dark-grey);
+        }
+
+        .security-badge i {
+            color: var(--kayleigh-success);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--kayleigh-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--kayleigh-dark-grey);
+            color: var(--kayleigh-light-grey);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--kayleigh-black);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .checkout-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .security-badges {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Loading State */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: var(--kayleigh-light-grey);
+        }
+
+        .loading i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Success/Error Messages */
+        .alert {
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        .alert-error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">Kayleigh Decor</a>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Secure Checkout</h1>
+            <p class="page-subtitle">Complete your factory-direct order with secure EFT payment</p>
+        </div>
+    </section>
+
+    <!-- Checkout Container -->
+    <div class="checkout-container">
+        <!-- Checkout Form -->
+        <main class="checkout-form-section">
+            <h2 class="section-title">Billing Details</h2>
+            
+            <form id="checkoutForm" class="checkout-form">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h3>Personal Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="firstName">First Name *</label>
+                            <input type="text" class="form-input" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="lastName">Last Name *</label>
+                            <input type="text" class="form-input" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email Address *</label>
+                            <input type="email" class="form-input" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Phone Number *</label>
+                            <input type="tel" class="form-input" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Billing Address -->
+                <div class="form-section">
+                    <h3>Billing Address</h3>
+                    <div class="form-group">
+                        <label class="form-label" for="address">Street Address *</label>
+                        <input type="text" class="form-input" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="city">City *</label>
+                            <input type="text" class="form-input" id="city" name="city" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="province">Province *</label>
+                            <select class="form-select" id="province" name="province" required>
+                                <option value="">Select Province</option>
+                                <option value="EC">Eastern Cape</option>
+                                <option value="FS">Free State</option>
+                                <option value="GP">Gauteng</option>
+                                <option value="KZN">KwaZulu-Natal</option>
+                                <option value="LP">Limpopo</option>
+                                <option value="MP">Mpumalanga</option>
+                                <option value="NC">Northern Cape</option>
+                                <option value="NW">North West</option>
+                                <option value="WC">Western Cape</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="postcode">Postcode *</label>
+                        <input type="text" class="form-input" id="postcode" name="postcode" maxlength="4" pattern="[0-9]{4}" required>
+                    </div>
+                </div>
+
+                <!-- Delivery Address -->
+                <div class="form-section">
+                    <h3>Delivery Information</h3>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="sameAsBilling" name="sameAsBilling" checked>
+                        <label for="sameAsBilling">Delivery address same as billing address</label>
+                    </div>
+                    
+                    <div id="deliveryAddress" style="display: none;">
+                        <div class="form-group">
+                            <label class="form-label" for="deliveryAddress">Delivery Street Address</label>
+                            <input type="text" class="form-input" id="deliveryAddress" name="deliveryAddress">
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="deliveryCity">Delivery City</label>
+                                <input type="text" class="form-input" id="deliveryCity" name="deliveryCity">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="deliveryPostcode">Delivery Postcode</label>
+                                <input type="text" class="form-input" id="deliveryPostcode" name="deliveryPostcode" maxlength="4" pattern="[0-9]{4}">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="deliveryInstructions">Delivery Instructions (Optional)</label>
+                        <textarea class="form-textarea" id="deliveryInstructions" name="deliveryInstructions" placeholder="e.g., Leave at security gate, Ring doorbell, etc."></textarea>
+                    </div>
+                </div>
+
+                <!-- Order Notes -->
+                <div class="form-section">
+                    <h3>Additional Information</h3>
+                    <div class="form-group">
+                        <label class="form-label" for="orderNotes">Order Notes (Optional)</label>
+                        <textarea class="form-textarea" id="orderNotes" name="orderNotes" placeholder="Any special requirements or notes about your order..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Terms and Conditions -->
+                <div class="form-section">
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            I agree to the <a href="terms-conditions.html" target="_blank">Terms and Conditions</a> 
+                            and <a href="privacy-policy.html" target="_blank">Privacy Policy</a> *
+                        </label>
+                    </div>
+                    
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="marketing" name="marketing">
+                        <label for="marketing">
+                            I would like to receive updates about new products and special offers via WhatsApp
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <!-- Order Summary -->
+        <aside class="order-summary">
+            <h2 class="section-title">Order Summary</h2>
+            
+            <div class="summary-items" id="orderItems">
+                <!-- Order items will be populated by JavaScript -->
+            </div>
+            
+            <div class="summary-row">
+                <span class="summary-label">Subtotal:</span>
+                <span class="summary-value" id="orderSubtotal">R0.00</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">Delivery:</span>
+                <span class="summary-value" id="orderDelivery">R0.00</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">VAT (15%):</span>
+                <span class="summary-value" id="orderVAT">R0.00</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">Total:</span>
+                <span class="summary-value summary-total" id="orderTotal">R0.00</span>
+            </div>
+
+            <!-- Payment Section -->
+            <div class="payment-section">
+                <h3 style="margin-bottom: 1rem; color: var(--kayleigh-black);">Payment Method</h3>
+                
+                <div class="payment-method">
+                    <h4><i class="fas fa-university"></i> Direct Bank Transfer (EFT)</h4>
+                    <p>Secure payment via Electronic Funds Transfer</p>
+                    <p><strong>No credit card required</strong></p>
+                    
+                    <div class="bank-details">
+                        <p><strong>FIRST NATIONAL BANK (FNB)</strong></p>
+                        <p>Account Name: Kayleigh Decor Warehouse</p>
+                        <p>Account Number: 6254 123 4567</p>
+                        <p>Branch Code: 210 217</p>
+                        <p>Reference: Your Order Number</p>
+                    </div>
+                    
+                    <div class="bank-details" style="margin-top: 1rem;">
+                        <p><strong>ABSA BANK</strong></p>
+                        <p>Account Name: Kayleigh Decor Warehouse</p>
+                        <p>Account Number: 4052 987 6543</p>
+                        <p>Branch Code: 632 005</p>
+                        <p>Reference: Your Order Number</p>
+                    </div>
+                </div>
+                
+                <div style="background: var(--kayleigh-beige); padding: 1rem; border-radius: 4px; margin-top: 1rem;">
+                    <p style="font-size: 0.9rem; color: var(--kayleigh-dark-grey); margin: 0;">
+                        <i class="fas fa-info-circle"></i> 
+                        Complete your order and we'll send you the bank details and order number via email and WhatsApp.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Security Badges -->
+            <div class="security-badges">
+                <div class="security-badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Secure Checkout</span>
+                </div>
+                <div class="security-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>POPIA Compliant</span>
+                </div>
+                <div class="security-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>SSL Protected</span>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="submit-section">
+                <button type="submit" class="submit-btn" id="placeOrderBtn" onclick="checkoutPage.placeOrder()">
+                    <i class="fas fa-credit-card"></i> Place Order
+                </button>
+                <p style="font-size: 0.8rem; color: var(--kayleigh-light-grey); text-align: center; margin-top: 0.5rem;">
+                    You will receive payment instructions via email and WhatsApp
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> 043 743 2380</p>
+                <p><i class="fab fa-whatsapp"></i> 084 219 1002</p>
+                <p><i class="fas fa-envelope"></i> decorating@kayleigh.co.za</p>
+                <p><i class="fas fa-map-marker-alt"></i> 66a Fleet Street, Quigney, East London, 5201</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="free-measurement.html">Free Measurement</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <a href="delivery.html">Delivery Information</a>
+                <a href="returns.html">Returns Policy</a>
+                <a href="installation.html">Installation Services</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kayleigh Decor Warehouse. All rights reserved. | Factory-direct quality from East London, South Africa</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/27842191002" class="whatsapp-chat" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Checkout Page Functionality
+        class CheckoutPage {
+            constructor() {
+                this.deliveryOption = localStorage.getItem('deliveryOption') || 'collection';
+                this.deliveryCost = parseFloat(localStorage.getItem('deliveryCost') || '0');
+                this.init();
+            }
+
+            init() {
+                this.renderOrderSummary();
+                this.initForm();
+                this.updateOrderSummary();
+            }
+
+            renderOrderSummary() {
+                const orderItems = document.getElementById('orderItems');
+                
+                if (store.cart.length === 0) {
+                    orderItems.innerHTML = '<p class="empty-cart" style="text-align: center; color: var(--kayleigh-light-grey); padding: 2rem;">Your cart is empty</p>';
+                    return;
+                }
+
+                orderItems.innerHTML = store.cart.map(item => `
+                    <div class="summary-item">
+                        <div class="summary-item-name">${item.name}</div>
+                        <div class="summary-item-quantity">×${item.quantity}</div>
+                        <div class="summary-item-price">${store.formatPrice(item.price * item.quantity)}</div>
+                    </div>
+                `).join('');
+            }
+
+            updateOrderSummary() {
+                const subtotal = store.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                const vat = subtotal * 0.15; // 15% VAT
+                const total = subtotal + vat + this.deliveryCost;
+                
+                document.getElementById('orderSubtotal').textContent = store.formatPrice(subtotal);
+                document.getElementById('orderVAT').textContent = store.formatPrice(vat);
+                document.getElementById('orderTotal').textContent = store.formatPrice(total);
+                
+                const deliveryElement = document.getElementById('orderDelivery');
+                if (this.deliveryOption === 'collection') {
+                    deliveryElement.textContent = 'FREE';
+                    deliveryElement.style.color = 'var(--kayleigh-success)';
+                } else {
+                    deliveryElement.textContent = store.formatPrice(this.deliveryCost);
+                    deliveryElement.style.color = 'var(--kayleigh-black)';
+                }
+            }
+
+            initForm() {
+                const form = document.getElementById('checkoutForm');
+                const sameAsBilling = document.getElementById('sameAsBilling');
+                const deliveryAddressSection = document.getElementById('deliveryAddress');
+                
+                // Toggle delivery address visibility
+                sameAsBilling.addEventListener('change', (e) => {
+                    if (e.target.checked) {
+                        deliveryAddressSection.style.display = 'none';
+                    } else {
+                        deliveryAddressSection.style.display = 'block';
+                    }
+                });
+                
+                // Form validation and submission
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.validateAndSubmit();
+                });
+                
+                // Auto-populate delivery fields when billing changes
+                const billingFields = ['address', 'city', 'province', 'postcode'];
+                const deliveryFields = ['deliveryAddress', 'deliveryCity', 'deliveryProvince', 'deliveryPostcode'];
+                
+                billingFields.forEach((field, index) => {
+                    const billingField = document.getElementById(field);
+                    const deliveryField = document.getElementById(deliveryFields[index]);
+                    
+                    if (billingField && deliveryField) {
+                        billingField.addEventListener('input', () => {
+                            if (sameAsBilling.checked) {
+                                deliveryField.value = billingField.value;
+                            }
+                        });
+                    }
+                });
+            }
+
+            validateAndSubmit() {
+                const form = document.getElementById('checkoutForm');
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Basic validation
+                if (!data.firstName || !data.lastName || !data.email || !data.phone || 
+                    !data.address || !data.city || !data.province || !data.postcode) {
+                    this.showAlert('Please fill in all required fields', 'error');
+                    return;
+                }
+                
+                if (!data.terms) {
+                    this.showAlert('Please agree to the Terms and Conditions', 'error');
+                    return;
+                }
+                
+                // Email validation
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(data.email)) {
+                    this.showAlert('Please enter a valid email address', 'error');
+                    return;
+                }
+                
+                // Phone validation (South African format)
+                const phoneRegex = /^0[0-9]{9}$/;
+                if (!phoneRegex.test(data.phone.replace(/\s/g, ''))) {
+                    this.showAlert('Please enter a valid South African phone number (e.g., 0821234567)', 'error');
+                    return;
+                }
+                
+                // Postcode validation
+                const postcodeRegex = /^[0-9]{4}$/;
+                if (!postcodeRegex.test(data.postcode)) {
+                    this.showAlert('Please enter a valid 4-digit postcode', 'error');
+                    return;
+                }
+                
+                this.placeOrder(data);
+            }
+
+            async placeOrder(formData) {
+                const submitBtn = document.getElementById('placeOrderBtn');
+                const originalText = submitBtn.innerHTML;
+                
+                // Show loading state
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing Order...';
+                
+                try {
+                    // Prepare order data
+                    const orderData = {
+                        ...formData,
+                        items: store.cart,
+                        subtotal: store.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0),
+                        deliveryCost: this.deliveryCost,
+                        deliveryOption: this.deliveryOption,
+                        orderDate: new Date().toISOString(),
+                        orderNumber: this.generateOrderNumber()
+                    };
+                    
+                    // Simulate order processing
+                    await this.simulateOrderProcessing();
+                    
+                    // Store order data
+                    localStorage.setItem('lastOrder', JSON.stringify(orderData));
+                    
+                    // Clear cart
+                    store.cart = [];
+                    store.saveCart();
+                    
+                    // Redirect to success page
+                    window.location.href = 'order-success.html';
+                    
+                } catch (error) {
+                    this.showAlert('There was an error processing your order. Please try again or contact us on WhatsApp.', 'error');
+                    console.error('Order processing error:', error);
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+            }
+
+            async simulateOrderProcessing() {
+                // Simulate API call delay
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        // Simulate success 95% of the time
+                        if (Math.random() > 0.05) {
+                            resolve({ success: true });
+                        } else {
+                            reject(new Error('Simulated processing error'));
+                        }
+                    }, 3000);
+                });
+            }
+
+            generateOrderNumber() {
+                const timestamp = Date.now().toString();
+                const random = Math.random().toString(36).substr(2, 4).toUpperCase();
+                return `KDW${timestamp.slice(-6)}${random}`;
+            }
+
+            showAlert(message, type = 'info') {
+                // Remove existing alerts
+                const existingAlert = document.querySelector('.alert');
+                if (existingAlert) {
+                    existingAlert.remove();
+                }
+                
+                const alert = document.createElement('div');
+                alert.className = `alert alert-${type}`;
+                alert.innerHTML = `
+                    <i class="fas fa-${this.getAlertIcon(type)}"></i>
+                    ${message}
+                `;
+                
+                const form = document.getElementById('checkoutForm');
+                form.parentNode.insertBefore(alert, form);
+                
+                // Auto-remove after 5 seconds
+                setTimeout(() => {
+                    if (alert.parentNode) {
+                        alert.remove();
+                    }
+                }, 5000);
+                
+                // Scroll to alert
+                alert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+
+            getAlertIcon(type) {
+                const icons = {
+                    'success': 'check-circle',
+                    'error': 'exclamation-circle',
+                    'warning': 'exclamation-triangle',
+                    'info': 'info-circle'
+                };
+                return icons[type] || 'info-circle';
+            }
+        }
+
+        // Initialize checkout page
+        let checkoutPage;
+        document.addEventListener('DOMContentLoaded', () => {
+            checkoutPage = new CheckoutPage();
+        });
+    </script>
+</body>
+</html>
