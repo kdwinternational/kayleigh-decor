@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank you for your order from Kayleigh Decor Warehouse. Check your email and WhatsApp for payment instructions.">
+    <title>Order Successful | Kayleigh Decor Warehouse</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kayleigh.co.za/order-success.html">
+    <meta property="og:title" content="Order Successful | Kayleigh Decor Warehouse">
+    <meta property="og:description" content="Thank you for your factory-direct order from East London. Payment instructions sent via email and WhatsApp.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --kayleigh-black: #111111;
+            --kayleigh-beige: #D4B896;
+            --kayleigh-white: #F5F5F5;
+            --kayleigh-gold: #C9A227;
+            --kayleigh-dark-grey: #333333;
+            --kayleigh-light-grey: #888888;
+            --kayleigh-success: #28a745;
+            --kayleigh-warning: #ffc107;
+            --kayleigh-danger: #dc3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--kayleigh-black);
+            background-color: var(--kayleigh-white);
+            font-size: 16px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-gold);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cart-icon {
+            position: relative;
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--kayleigh-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Success Container */
+        .success-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: var(--kayleigh-success);
+            margin-bottom: 2rem;
+            animation: successPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes successPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .success-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+        }
+
+        .success-subtitle {
+            font-size: 1.2rem;
+            color: var(--kayleigh-dark-grey);
+            margin-bottom: 2rem;
+        }
+
+        /* Order Details Card */
+        .order-details {
+            background: var(--kayleigh-white);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .order-details h3 {
+            color: var(--kayleigh-black);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--kayleigh-gold);
+        }
+
+        .order-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-item {
+            background: var(--kayleigh-beige);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .info-label {
+            font-size: 0.9rem;
+            color: var(--kayleigh-dark-grey);
+            margin-bottom: 0.25rem;
+        }
+
+        .info-value {
+            font-weight: 600;
+            color: var(--kayleigh-black);
+            font-size: 1.1rem;
+        }
+
+        /* Next Steps */
+        .next-steps {
+            background: var(--kayleigh-beige);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .next-steps h3 {
+            color: var(--kayleigh-black);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .step {
+            background: var(--kayleigh-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .step-icon {
+            font-size: 2rem;
+            color: var(--kayleigh-gold);
+            margin-bottom: 1rem;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: var(--kayleigh-black);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-description {
+            color: var(--kayleigh-dark-grey);
+            font-size: 0.9rem;
+        }
+
+        /* Bank Details */
+        .bank-details {
+            background: var(--kayleigh-white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .bank-details h3 {
+            color: var(--kayleigh-black);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .bank-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .bank-option {
+            background: var(--kayleigh-beige);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .bank-name {
+            font-weight: 700;
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .bank-detail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .bank-detail-label {
+            color: var(--kayleigh-dark-grey);
+        }
+
+        .bank-detail-value {
+            font-weight: 500;
+            color: var(--kayleigh-black);
+        }
+
+        .reference-highlight {
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+        }
+
+        .btn-primary:hover {
+            background: #B8921F;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+        }
+
+        .btn-secondary {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+        }
+
+        .btn-secondary:hover {
+            background: var(--kayleigh-dark-grey);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--kayleigh-gold);
+            border: 2px solid var(--kayleigh-gold);
+        }
+
+        .btn-outline:hover {
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+        }
+
+        /* Support Section */
+        .support-section {
+            background: var(--kayleigh-beige);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .support-section h3 {
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+        }
+
+        .support-section p {
+            color: var(--kayleigh-dark-grey);
+            margin-bottom: 1.5rem;
+        }
+
+        .support-contact {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--kayleigh-black);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item i {
+            color: var(--kayleigh-gold);
+        }
+
+        .contact-item:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--kayleigh-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--kayleigh-dark-grey);
+            color: var(--kayleigh-light-grey);
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Chat */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-chat:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--kayleigh-black);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .success-container {
+                padding: 2rem 1rem;
+            }
+
+            .success-title {
+                font-size: 2rem;
+            }
+
+            .order-info {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .bank-options {
+                grid-template-columns: 1fr;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .support-contact {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">Kayleigh Decor</a>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Success Container -->
+    <div class="success-container">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        
+        <h1 class="success-title">Order Successful!</h1>
+        <p class="success-subtitle">
+            Thank you for choosing Kayleigh Decor Warehouse. Your factory-direct order has been received and we're getting it ready for you.
+        </p>
+
+        <!-- Order Details -->
+        <div class="order-details" id="orderDetails">
+            <h3><i class="fas fa-receipt"></i> Order Details</h3>
+            <div class="order-info" id="orderInfo">
+                <!-- Order information will be populated by JavaScript -->
+            </div>
+            
+            <div id="orderItems">
+                <!-- Order items will be populated by JavaScript -->
+            </div>
+            
+            <div class="summary-row" style="border-top: 2px solid var(--kayleigh-gold); margin-top: 1rem; padding-top: 1rem;">
+                <span class="summary-label" style="font-weight: 600; font-size: 1.1rem;">Total Amount:</span>
+                <span class="summary-value summary-total" id="orderTotal">R0.00</span>
+            </div>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="next-steps">
+            <h3>What Happens Next?</h3>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h4 class="step-title">Check Your Email</h4>
+                    <p class="step-description">You'll receive an order confirmation with bank details and payment instructions within 5 minutes.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h4 class="step-title">WhatsApp Message</h4>
+                    <p class="step-description">We'll also send you the same information via WhatsApp for your convenience.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h4 class="step-title">Make Payment</h4>
+                    <p class="step-description">Use your order number as reference when making EFT payment to FNB or ABSA.</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h4 class="step-title">Production & Delivery</h4>
+                    <p class="step-description">Once payment is confirmed, we'll start production and deliver to your address or for collection.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bank Details -->
+        <div class="bank-details">
+            <h3><i class="fas fa-university"></i> Payment Details</h3>
+            <p style="text-align: center; margin-bottom: 1.5rem; color: var(--kayleigh-dark-grey);">
+                Use your order number as payment reference
+            </p>
+            
+            <div class="bank-options">
+                <div class="bank-option">
+                    <div class="bank-name">FIRST NATIONAL BANK (FNB)</div>
+                    <div class="bank-detail">
+                        <span class="bank-detail-label">Account Name:</span>
+                        <span class="bank-detail-value">Kayleigh Decor Warehouse</span>
+                    </div>
+                    <div class="bank-detail">
+                        <span class="bank-detail-label">Account Number:</span>
+                        <span class="bank-detail-value">6254 123 4567</span>
+                    </div>
+                    <div class="bank-detail">
+                        <span class="bank-detail-label">Branch Code:</span>
+                        <span class="bank-detail-value">210 217</span>
+                    </div>
+                    <div class="reference-highlight">
+                        Reference: <span id="orderNumber">Your Order Number</span>
+                    </div>
+                </div>
+                
+                <div class="bank-option">
+                    <div class="bank-name">ABSA BANK</div>
+                    <div class="bank-detail">
+                        <span class="bank-detail-label">Account Name:</span>
+                        <span class="bank-detail-value">Kayleigh Decor Warehouse</span>
+                    </div>
+                    <div class="bank-detail">
+                        <span class="bank-detail-label">Account Number:</span>
+                        <span class="bank-detail-value">4052 987 6543</span>
+                    </div>
+                    <div class="bank-detail">
+                        <span class="bank-detail-label">Branch Code:</span>
+                        <span class="bank-detail-value">632 005</span>
+                    </div>
+                    <div class="reference-highlight">
+                        Reference: <span id="absaOrderNumber">Your Order Number</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <a href="shop.html" class="btn btn-primary">
+                <i class="fas fa-shopping-bag"></i> Continue Shopping
+            </a>
+            <a href="index.html" class="btn btn-secondary">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+            <button class="btn btn-outline" onclick="window.print()">
+                <i class="fas fa-print"></i> Print Details
+            </button>
+        </div>
+
+        <!-- Support Section -->
+        <div class="support-section">
+            <h3><i class="fas fa-headset"></i> Need Help?</h3>
+            <p>If you have any questions about your order or payment, please don't hesitate to contact us:</p>
+            
+            <div class="support-contact">
+                <a href="tel:0437432380" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    043 743 2380
+                </a>
+                <a href="https://wa.me/27842191002" class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    084 219 1002
+                </a>
+                <a href="mailto:decorating@kayleigh.co.za" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    decorating@kayleigh.co.za
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> 043 743 2380</p>
+                <p><i class="fab fa-whatsapp"></i> 084 219 1002</p>
+                <p><i class="fas fa-envelope"></i> decorating@kayleigh.co.za</p>
+                <p><i class="fas fa-map-marker-alt"></i> 66a Fleet Street, Quigney, East London, 5201</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="free-measurement.html">Free Measurement</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <a href="delivery.html">Delivery Information</a>
+                <a href="returns.html">Returns Policy</a>
+                <a href="installation.html">Installation Services</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kayleigh Decor Warehouse. All rights reserved. | Factory-direct quality from East London, South Africa</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/27842191002" class="whatsapp-chat" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Order Success Page Functionality
+        class OrderSuccessPage {
+            constructor() {
+                this.orderData = null;
+                this.init();
+            }
+
+            init() {
+                this.loadOrderData();
+                this.displayOrderDetails();
+                this.clearCart();
+            }
+
+            loadOrderData() {
+                try {
+                    const orderData = localStorage.getItem('lastOrder');
+                    if (orderData) {
+                        this.orderData = JSON.parse(orderData);
+                    } else {
+                        // Generate mock order data if none exists
+                        this.orderData = this.generateMockOrder();
+                    }
+                } catch (error) {
+                    console.error('Error loading order data:', error);
+                    this.orderData = this.generateMockOrder();
+                }
+            }
+
+            generateMockOrder() {
+                return {
+                    orderNumber: 'KDW' + Date.now().toString().slice(-6) + Math.random().toString(36).substr(2, 4).toUpperCase(),
+                    orderDate: new Date().toISOString(),
+                    firstName: 'Customer',
+                    lastName: 'Name',
+                    email: 'customer@example.com',
+                    phone: '0821234567',
+                    deliveryOption: 'delivery',
+                    deliveryCost: 150,
+                    items: [
+                        {
+                            name: 'Sample Product',
+                            price: 999.00,
+                            quantity: 1,
+                            leadTime: 14
+                        }
+                    ]
+                };
+            }
+
+            displayOrderDetails() {
+                if (!this.orderData) return;
+
+                // Display order information
+                const orderInfo = document.getElementById('orderInfo');
+                const orderDate = new Date(this.orderData.orderDate).toLocaleDateString('en-ZA', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+
+                orderInfo.innerHTML = `
+                    <div class="info-item">
+                        <div class="info-label">Order Number</div>
+                        <div class="info-value">${this.orderData.orderNumber}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Order Date</div>
+                        <div class="info-value">${orderDate}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Customer</div>
+                        <div class="info-value">${this.orderData.firstName} ${this.orderData.lastName}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">${this.orderData.email}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">${this.orderData.phone}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Delivery Method</div>
+                        <div class="info-value">${this.orderData.deliveryOption === 'collection' ? 'Factory Collection' : 'Delivery'}</div>
+                    </div>
+                `;
+
+                // Display order items
+                const orderItems = document.getElementById('orderItems');
+                orderItems.innerHTML = this.orderData.items.map(item => `
+                    <div class="summary-item" style="display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid var(--kayleigh-beige);">
+                        <div class="summary-item-name" style="flex: 1; font-size: 0.9rem; color: var(--kayleigh-dark-grey);">${item.name}</div>
+                        <div class="summary-item-quantity" style="color: var(--kayleigh-light-grey); font-size: 0.8rem; margin: 0 0.5rem;">×${item.quantity}</div>
+                        <div class="summary-item-price" style="font-weight: 500; color: var(--kayleigh-black);">${store.formatPrice(item.price * item.quantity)}</div>
+                    </div>
+                `).join('');
+
+                // Calculate and display total
+                const subtotal = this.orderData.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                const vat = subtotal * 0.15;
+                const total = subtotal + vat + this.orderData.deliveryCost;
+
+                document.getElementById('orderTotal').textContent = store.formatPrice(total);
+
+                // Update order number references
+                document.getElementById('orderNumber').textContent = this.orderData.orderNumber;
+                document.getElementById('absaOrderNumber').textContent = this.orderData.orderNumber;
+            }
+
+            clearCart() {
+                // Clear the cart since order is complete
+                store.cart = [];
+                store.saveCart();
+                store.updateCartDisplay();
+            }
+
+            // Print functionality
+            printDetails() {
+                window.print();
+            }
+        }
+
+        // Initialize success page
+        let orderSuccessPage;
+        document.addEventListener('DOMContentLoaded', () => {
+            orderSuccessPage = new OrderSuccessPage();
+        });
+
+        // Add print styles
+        const printStyles = `
+            @media print {
+                .header, .footer, .whatsapp-chat, .action-buttons {
+                    display: none !important;
+                }
+                
+                .success-container {
+                    padding: 1rem;
+                }
+                
+                .order-details, .bank-details, .next-steps {
+                    break-inside: avoid;
+                    margin-bottom: 1rem;
+                }
+                
+                body {
+                    font-size: 12px;
+                }
+            }
+        `;
+        
+        const styleSheet = document.createElement('style');
+        styleSheet.textContent = printStyles;
+        document.head.appendChild(styleSheet);
+    </script>
+</body>
+</html>
