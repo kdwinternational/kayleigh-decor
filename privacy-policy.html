@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kayleigh Decor Warehouse Privacy Policy - How we protect your personal information in compliance with POPIA.">
+    <title>Privacy Policy | Kayleigh Decor Warehouse</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --kayleigh-black: #111111;
+            --kayleigh-beige: #D4B896;
+            --kayleigh-white: #F5F5F5;
+            --kayleigh-gold: #C9A227;
+            --kayleigh-dark-grey: #333333;
+            --kayleigh-light-grey: #888888;
+            --kayleigh-success: #28a745;
+            --kayleigh-warning: #ffc107;
+            --kayleigh-danger: #dc3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--kayleigh-black);
+            background-color: var(--kayleigh-white);
+            font-size: 16px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-gold);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cart-icon {
+            position: relative;
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--kayleigh-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: var(--kayleigh-beige);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--kayleigh-dark-grey);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .content-section {
+            background: var(--kayleigh-white);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .content-section h2 {
+            color: var(--kayleigh-black);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--kayleigh-gold);
+        }
+
+        .content-section h3 {
+            color: var(--kayleigh-dark-grey);
+            font-size: 1.3rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .content-section p {
+            margin-bottom: 1rem;
+            color: var(--kayleigh-dark-grey);
+            line-height: 1.7;
+        }
+
+        .content-section ul, .content-section ol {
+            margin: 1rem 0 1rem 2rem;
+            color: var(--kayleigh-dark-grey);
+        }
+
+        .content-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .content-section strong {
+            color: var(--kayleigh-black);
+            font-weight: 600;
+        }
+
+        .content-section a {
+            color: var(--kayleigh-gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .content-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Info Box */
+        .contact-info {
+            background: var(--kayleigh-beige);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .contact-info h3 {
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+            border: none;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--kayleigh-dark-grey);
+        }
+
+        .contact-item i {
+            color: var(--kayleigh-gold);
+            width: 20px;
+        }
+
+        /* Rights Section */
+        .rights-section {
+            background: linear-gradient(135deg, var(--kayleigh-beige) 0%, var(--kayleigh-white) 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .right-item {
+            background: var(--kayleigh-white);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .right-item h4 {
+            color: var(--kayleigh-black);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .right-item i {
+            color: var(--kayleigh-gold);
+        }
+
+        /* Cookie Section */
+        .cookie-section {
+            background: var(--kayleigh-white);
+            border-left: 4px solid var(--kayleigh-gold);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .cookie-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cookie-type {
+            background: var(--kayleigh-beige);
+            padding: 1rem;
+            border-radius: 8px;
+        }
+
+        .cookie-type h5 {
+            color: var(--kayleigh-black);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--kayleigh-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--kayleigh-dark-grey);
+            color: var(--kayleigh-light-grey);
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Chat */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-chat:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--kayleigh-black);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 2rem 1rem;
+            }
+
+            .content-section {
+                padding: 1.5rem;
+            }
+
+            .rights-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cookie-types {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">Kayleigh Decor</a>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Privacy Policy</h1>
+            <p class="page-subtitle">How we protect your personal information in compliance with POPIA</p>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="content-section">
+            <h2>Introduction</h2>
+            <p>Kayleigh Decor Warehouse ("we," "us," or "our") respects your privacy and is committed to protecting your personal information in accordance with the Protection of Personal Information Act (POPIA) of South Africa. This privacy policy explains how we collect, use, store, and protect your personal information when you visit our website or use our services.</p>
+            
+            <p>By using our website and services, you acknowledge that you have read and understood this privacy policy and agree to the collection, use, and processing of your personal information as described herein.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Who We Are</h2>
+            <div class="contact-info">
+                <h3><i class="fas fa-building"></i> Company Information</h3>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span><strong>Kayleigh Decor Warehouse</strong><br>66a Fleet Street, Quigney<br>East London, 5201, Eastern Cape</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>043 743 2380</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>084 219 1002</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>decorating@kayleigh.co.za</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Information We Collect</h2>
+            
+            <h3>Personal Information You Provide</h3>
+            <ul>
+                <li><strong>Contact Information:</strong> Name, email address, phone number, physical address</li>
+                <li><strong>Order Information:</strong> Products purchased, delivery address, payment details</li>
+                <li><strong>Measurement Details:</strong> Window measurements, room dimensions, property photos</li>
+                <li><strong>Communication:</strong> Emails, WhatsApp messages, phone call records</li>
+                <li><strong>Account Information:</strong> Username, password (encrypted), order history</li>
+                <li><strong>Payment Information:</strong> Bank details for EFT payments (we do not store credit card information)</li>
+            </ul>
+
+            <h3>Information We Collect Automatically</h3>
+            <ul>
+                <li><strong>Website Usage:</strong> IP address, browser type, pages visited, time spent on site</li>
+                <li><strong>Device Information:</strong> Device type, operating system, screen resolution</li>
+                <li><strong>Location Data:</strong> Approximate location based on IP address</li>
+                <li><strong>Cookies:</strong> Small text files stored on your device (see Cookie Policy)</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>How We Use Your Information</h2>
+            
+            <h3>Order Processing</h3>
+            <ul>
+                <li>Processing and fulfilling your orders</li>
+                <li>Arranging delivery and installation services</li>
+                <li>Communicating order status and updates</li>
+                <li>Handling returns and exchanges</li>
+            </ul>
+
+            <h3>Customer Service</h3>
+            <ul>
+                <li>Responding to your enquiries and requests</li>
+                <li>Providing product information and quotes</li>
+                <li>Offering measurement and consultation services</li>
+                <li>Resolving customer service issues</li>
+            </ul>
+
+            <h3>Marketing and Communication</h3>
+            <ul>
+                <li>Sending order confirmations and updates</li>
+                <li>Sharing information about new products and promotions (with your consent)</li>
+                <li>Conducting customer satisfaction surveys</li>
+                <li>Improving our products and services</li>
+            </ul>
+
+            <h3>Business Operations</h3>
+            <ul>
+                <li>Maintaining our website and systems</li>
+                <li>Analysing website performance and user behaviour</li>
+                <li>Preventing fraud and ensuring security</li>
+                <li>Complying with legal and regulatory requirements</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Legal Basis for Processing</h2>
+            <p>We process your personal information based on the following legal grounds:</p>
+            <ol>
+                <li><strong>Contractual Necessity:</strong> To fulfill our contract with you when you purchase products</li>
+                <li><strong>Legitimate Interests:</strong> To improve our services, prevent fraud, and manage our business</li>
+                <li><strong>Legal Obligation:</strong> To comply with tax, accounting, and other legal requirements</li>
+                <li><strong>Consent:</strong> For marketing communications and optional services</li>
+            </ol>
+        </div>
+
+        <div class="content-section">
+            <h2>How We Share Your Information</h2>
+            
+            <h3>Service Providers</h3>
+            <ul>
+                <li><strong>Delivery Companies:</strong> Courier services for product delivery</li>
+                <li><strong>Installation Partners:</strong> Certified installers for complex products</li>
+                <li><strong>Payment Processors:</strong> Banks for EFT payments (no credit card processing)</li>
+                <li><strong>IT Services:</strong> Website hosting, email providers, backup services</li>
+                <li><strong>Marketing Tools:</strong> Email marketing platforms (with your consent)</li>
+            </ul>
+
+            <h3>Legal Requirements</h3>
+            <ul>
+                <li><strong>Government Agencies:</strong> When required by law or court order</li>
+                <li><strong>Tax Authorities:</strong> For compliance with tax regulations</li>
+                <li><strong>Law Enforcement:</strong> When necessary to prevent fraud or protect our rights</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Data Security</h2>
+            <p>We implement appropriate technical and organizational measures to protect your personal information:</p>
+            
+            <h3>Technical Safeguards</h3>
+            <ul>
+                <li><strong>Encryption:</strong> SSL/TLS encryption for website data transmission</li>
+                <li><strong>Secure Storage:</strong> Password-protected databases and servers</li>
+                <li><strong>Access Controls:</strong> Limited access to personal information</li>
+                <li><strong>Regular Backups:</strong> Secure data backup procedures</li>
+                <li><strong>Security Updates:</strong> Regular software and security updates</li>
+            </ul>
+
+            <h3>Physical Safeguards</h3>
+            <ul>
+                <li><strong>Secure Premises:</strong> Access control to our physical location</li>
+                <li><strong>Document Security:</strong> Secure storage of physical documents</li>
+                <li><strong>Disposal:</strong> Secure destruction of unnecessary data</li>
+            </ul>
+
+            <h3>Administrative Safeguards</h3>
+            <ul>
+                <li><strong>Staff Training:</strong> Privacy and security training for employees</li>
+                <li><strong>Policies:</strong> Internal data protection policies and procedures</li>
+                <li><strong>Monitoring:</strong> Regular security assessments and audits</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Data Retention</h2>
+            <p>We retain your personal information for the following periods:</p>
+            
+            <h3>Active Information</h3>
+            <ul>
+                <li><strong>Customer Records:</strong> 5 years after last purchase or contact</li>
+                <li><strong>Order History:</strong> 5 years for tax and warranty purposes</li>
+                <li><strong>Communication Records:</strong> 2 years for customer service reference</li>
+                <li><strong>Measurement Data:</strong> 2 years for potential repeat orders</li>
+            </ul>
+
+            <h3>Marketing Information</h3>
+            <ul>
+                <li><strong>Email Subscribers:</strong> Until you unsubscribe or 2 years of inactivity</li>
+                <li><strong>Marketing Preferences:</strong> Until you change or withdraw consent</li>
+                <li><strong>Website Analytics:</strong> 26 months (Google Analytics default)</li>
+            </ul>
+
+            <h3>Legal Requirements</h3>
+            <ul>
+                <li><strong>Tax Records:</strong> 5 years as required by SARS</li>
+                <li><strong>Financial Records:</strong> 5 years for accounting purposes</li>
+                <li><strong>Legal Disputes:</strong> Until resolution plus 2 years</li>
+            </ul>
+        </div>
+
+        <div class="rights-section">
+            <h2>Your Rights Under POPIA</h2>
+            <p>You have the following rights regarding your personal information:</p>
+            
+            <div class="rights-grid">
+                <div class="right-item">
+                    <h4><i class="fas fa-eye"></i> Right of Access</h4>
+                    <p>Request a copy of your personal information we hold, details of how we process it, and receive your data in a portable format.</p>
+                </div>
+                
+                <div class="right-item">
+                    <h4><i class="fas fa-edit"></i> Right to Rectification</h4>
+                    <p>Correct inaccurate or incomplete personal information and update your contact and preference details.</p>
+                </div>
+                
+                <div class="right-item">
+                    <h4><i class="fas fa-trash"></i> Right to Erasure</h4>
+                    <p>Request deletion of your personal information (subject to legal requirements) and withdraw consent for processing.</p>
+                </div>
+                
+                <div class="right-item">
+                    <h4><i class="fas fa-ban"></i> Right to Objection</h4>
+                    <p>Object to processing for marketing purposes, automated decision-making, and request human intervention.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Cookies and Tracking</h2>
+            <p>We use cookies and similar technologies to:</p>
+            <ul>
+                <li>Remember your preferences and login details</li>
+                <li>Understand how you use our website</li>
+                <li>Improve your shopping experience</li>
+                <li>Measure the effectiveness of our marketing</li>
+            </ul>
+
+            <div class="cookie-section">
+                <h3>Types of Cookies We Use</h3>
+                <div class="cookie-types">
+                    <div class="cookie-type">
+                        <h5>Essential Cookies</h5>
+                        <p>Necessary for website functionality, shopping cart, and security features.</p>
+                    </div>
+                    <div class="cookie-type">
+                        <h5>Analytics Cookies</h5>
+                        <p>Help us understand how visitors use our site and measure performance.</p>
+                    </div>
+                    <div class="cookie-type">
+                        <h5>Functionality Cookies</h5>
+                        <p>Remember your preferences and settings for a better experience.</p>
+                    </div>
+                    <div class="cookie-type">
+                        <h5>Marketing Cookies</h5>
+                        <p>Used for advertising and measuring campaign effectiveness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Third-Party Links</h2>
+            <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these websites. We recommend reviewing the privacy policies of any third-party sites you visit.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Children's Privacy</h2>
+            <p>Our services are intended for individuals 18 years and older. We do not knowingly collect personal information from children under 18. If you believe we have collected information from a child, please contact us immediately.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>International Data Transfers</h2>
+            <p>We store your personal information in South Africa. Some of our service providers may process data outside South Africa, but we ensure appropriate safeguards are in place:</p>
+            <ul>
+                <li>Standard contractual clauses for international transfers</li>
+                <li>Adequacy decisions for recipient countries</li>
+                <li>Binding corporate rules where applicable</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Changes to This Policy</h2>
+            <p>We may update this privacy policy from time to time. We will:</p>
+            <ul>
+                <li>Post the updated policy on our website</li>
+                <li>Notify you of significant changes via email</li>
+                <li>Update the "Last Updated" date at the top</li>
+                <li>Provide a summary of key changes</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>Contact Us</h2>
+            <p>If you have questions about this privacy policy or your personal information, please contact us:</p>
+            
+            <div class="contact-info">
+                <h3><i class="fas fa-user-shield"></i> Privacy Officer</h3>
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <span>Privacy Officer: [Owner Name]</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>66a Fleet Street, Quigney, East London, 5201</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>privacy@kayleigh.co.za</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Information Regulator Contact</h2>
+            <p>If you are unsatisfied with our response to your privacy concerns, you may contact the Information Regulator:</p>
+            
+            <div class="contact-info">
+                <h3><i class="fas fa-balance-scale"></i> Information Regulator South Africa</h3>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>33 Hoofd Street, Forum III, 3rd Floor, Braampark<br>P.O. Box 31533, Braamfontein, Johannesburg, 2017</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>012 406 4818</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>inforeg@justice.gov.za</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i>
+                    <span>https://www.justice.gov.za/inforeg/</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> 043 743 2380</p>
+                <p><i class="fab fa-whatsapp"></i> 084 219 1002</p>
+                <p><i class="fas fa-envelope"></i> decorating@kayleigh.co.za</p>
+                <p><i class="fas fa-map-marker-alt"></i> 66a Fleet Street, Quigney, East London, 5201</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="free-measurement.html">Free Measurement</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <a href="delivery.html">Delivery Information</a>
+                <a href="returns.html">Returns Policy</a>
+                <a href="installation.html">Installation Services</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kayleigh Decor Warehouse. All rights reserved. | Factory-direct quality from East London, South Africa</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/27842191002" class="whatsapp-chat" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
