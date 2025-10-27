@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your Kayleigh Decor Warehouse order. Factory-direct home decor with country-wide delivery from East London.">
+    <title>Shopping Cart | Kayleigh Decor Warehouse</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kayleigh.co.za/cart.html">
+    <meta property="og:title" content="Shopping Cart | Kayleigh Decor Warehouse">
+    <meta property="og:description" content="Review your factory-direct home decor order from East London's premier supplier.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --kayleigh-black: #111111;
+            --kayleigh-beige: #D4B896;
+            --kayleigh-white: #F5F5F5;
+            --kayleigh-gold: #C9A227;
+            --kayleigh-dark-grey: #333333;
+            --kayleigh-light-grey: #888888;
+            --kayleigh-success: #28a745;
+            --kayleigh-warning: #ffc107;
+            --kayleigh-danger: #dc3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--kayleigh-black);
+            background-color: var(--kayleigh-white);
+            font-size: 16px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-gold);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cart-icon {
+            position: relative;
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--kayleigh-white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: var(--kayleigh-beige);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--kayleigh-black);
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.1rem;
+            color: var(--kayleigh-dark-grey);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Cart Container */
+        .cart-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Cart Items */
+        .cart-items-section {
+            background: var(--kayleigh-white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--kayleigh-black);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--kayleigh-gold);
+        }
+
+        .cart-items {
+            min-height: 200px;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 100px 1fr auto auto;
+            gap: 1rem;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--kayleigh-beige);
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-image {
+            width: 100px;
+            height: 100px;
+            background: var(--kayleigh-light-grey);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--kayleigh-white);
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--kayleigh-black);
+            margin-bottom: 0.25rem;
+        }
+
+        .cart-item-lead-time {
+            font-size: 0.85rem;
+            color: var(--kayleigh-dark-grey);
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-price {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--kayleigh-gold);
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            background: var(--kayleigh-beige);
+            border: none;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .quantity-btn:hover {
+            background: var(--kayleigh-gold);
+        }
+
+        .quantity-input {
+            width: 50px;
+            height: 30px;
+            text-align: center;
+            border: 1px solid var(--kayleigh-beige);
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .cart-item-remove {
+            background: var(--kayleigh-danger);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .cart-item-remove:hover {
+            background: #c82333;
+        }
+
+        /* Empty Cart */
+        .empty-cart {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--kayleigh-light-grey);
+        }
+
+        .empty-cart i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .empty-cart h3 {
+            margin-bottom: 1rem;
+            color: var(--kayleigh-dark-grey);
+        }
+
+        .empty-cart .btn {
+            margin-top: 1rem;
+        }
+
+        /* Cart Summary */
+        .cart-summary {
+            background: var(--kayleigh-white);
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--kayleigh-beige);
+        }
+
+        .summary-row:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--kayleigh-black);
+        }
+
+        .summary-label {
+            color: var(--kayleigh-dark-grey);
+        }
+
+        .summary-value {
+            color: var(--kayleigh-black);
+            font-weight: 500;
+        }
+
+        .summary-total {
+            font-size: 1.3rem;
+            color: var(--kayleigh-gold);
+            font-weight: 700;
+        }
+
+        /* Delivery Options */
+        .delivery-options {
+            margin: 1.5rem 0;
+            padding: 1rem;
+            background: var(--kayleigh-beige);
+            border-radius: 8px;
+        }
+
+        .delivery-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .delivery-option input[type="radio"] {
+            margin: 0;
+        }
+
+        .delivery-option label {
+            flex: 1;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .delivery-cost {
+            font-weight: 600;
+            color: var(--kayleigh-gold);
+        }
+
+        /* Postcode Input */
+        .postcode-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--kayleigh-beige);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .calculate-shipping-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-bottom: 1rem;
+        }
+
+        .calculate-shipping-btn:hover {
+            background: #B8921F;
+        }
+
+        /* Checkout Button */
+        .checkout-section {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--kayleigh-gold);
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--kayleigh-gold);
+            color: var(--kayleigh-black);
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .checkout-btn:hover {
+            background: #B8921F;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+        }
+
+        .checkout-btn:disabled {
+            background: var(--kayleigh-light-grey);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .checkout-note {
+            font-size: 0.8rem;
+            color: var(--kayleigh-light-grey);
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        /* Continue Shopping */
+        .continue-shopping {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .continue-shopping .btn {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .continue-shopping .btn:hover {
+            background: var(--kayleigh-dark-grey);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--kayleigh-black);
+            color: var(--kayleigh-white);
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            color: var(--kayleigh-gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--kayleigh-white);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: var(--kayleigh-gold);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--kayleigh-dark-grey);
+            color: var(--kayleigh-light-grey);
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Chat */
+        .whatsapp-chat {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-chat:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 1rem;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--kayleigh-black);
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .page-title {
+                font-size: 2rem;
+            }
+
+            .cart-container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .cart-item {
+                grid-template-columns: 80px 1fr;
+                gap: 1rem;
+            }
+
+            .cart-item-quantity,
+            .cart-item-remove {
+                grid-column: 2;
+                justify-self: start;
+                margin-top: 0.5rem;
+            }
+
+            .cart-item-remove {
+                margin-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">Kayleigh Decor</a>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Shopping Cart</h1>
+            <p class="page-subtitle">Review your factory-direct home decor order from East London</p>
+        </div>
+    </section>
+
+    <!-- Cart Container -->
+    <div class="cart-container">
+        <!-- Cart Items -->
+        <section class="cart-items-section">
+            <h2 class="section-title">Your Items</h2>
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart" id="emptyCart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>Add some beautiful factory-direct products to get started</p>
+                    <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart Summary -->
+        <aside class="cart-summary">
+            <h2 class="section-title">Order Summary</h2>
+            
+            <!-- Shipping Calculator -->
+            <div class="delivery-options">
+                <h4 style="margin-bottom: 1rem; color: var(--kayleigh-black);">Delivery Options</h4>
+                
+                <div class="delivery-option">
+                    <input type="radio" id="factoryCollection" name="deliveryOption" value="collection" checked>
+                    <label for="factoryCollection">
+                        <strong>Free Factory Collection</strong><br>
+                        <small>66a Fleet Street, Quigney, East London</small>
+                    </label>
+                    <div class="delivery-cost">R0</div>
+                </div>
+                
+                <div class="delivery-option">
+                    <input type="radio" id="delivery" name="deliveryOption" value="delivery">
+                    <label for="delivery">
+                        <strong>Delivery to Your Address</strong>
+                    </label>
+                    <div class="delivery-cost" id="deliveryCost">Calculate below</div>
+                </div>
+            </div>
+
+            <div id="deliveryCalculator" style="display: none;">
+                <input type="text" class="postcode-input" id="cartPostcode" placeholder="Enter your postcode" maxlength="4" pattern="[0-9]{4}">
+                <button class="calculate-shipping-btn" onclick="cartPage.calculateDelivery()">Calculate Delivery Cost</button>
+                <div id="deliveryResult"></div>
+            </div>
+
+            <!-- Order Totals -->
+            <div class="summary-row">
+                <span class="summary-label">Subtotal:</span>
+                <span class="summary-value" id="cartSubtotal">R0.00</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">Delivery:</span>
+                <span class="summary-value" id="deliveryFee">R0.00</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">VAT (15%):</span>
+                <span class="summary-value" id="vatAmount">R0.00</span>
+            </div>
+            <div class="summary-row">
+                <span class="summary-label">Total:</span>
+                <span class="summary-value summary-total" id="cartTotal">R0.00</span>
+            </div>
+
+            <!-- Checkout Button -->
+            <div class="checkout-section">
+                <button class="checkout-btn" id="checkoutBtn" onclick="cartPage.proceedToCheckout()">
+                    Proceed to Checkout
+                </button>
+                <p class="checkout-note">
+                    Secure checkout with Direct Bank Transfer (EFT)<br>
+                    No credit card required
+                </p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Continue Shopping -->
+    <div class="continue-shopping">
+        <a href="shop.html" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Continue Shopping
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-phone"></i> 043 743 2380</p>
+                <p><i class="fab fa-whatsapp"></i> 084 219 1002</p>
+                <p><i class="fas fa-envelope"></i> decorating@kayleigh.co.za</p>
+                <p><i class="fas fa-map-marker-alt"></i> 66a Fleet Street, Quigney, East London, 5201</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="about.html">About Us</a>
+                <a href="shop.html">Shop</a>
+                <a href="free-measurement.html">Free Measurement</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <a href="delivery.html">Delivery Information</a>
+                <a href="returns.html">Returns Policy</a>
+                <a href="installation.html">Installation Services</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kayleigh Decor Warehouse. All rights reserved. | Factory-direct quality from East London, South Africa</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/27842191002" class="whatsapp-chat" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Cart Page Specific Functionality
+        class CartPage {
+            constructor() {
+                this.deliveryCost = 0;
+                this.selectedDeliveryOption = 'collection';
+                this.init();
+            }
+
+            init() {
+                this.initDeliveryOptions();
+                this.renderCart();
+                this.updateSummary();
+            }
+
+            initDeliveryOptions() {
+                const deliveryOptions = document.querySelectorAll('input[name="deliveryOption"]');
+                const deliveryCalculator = document.getElementById('deliveryCalculator');
+                
+                deliveryOptions.forEach(option => {
+                    option.addEventListener('change', (e) => {
+                        this.selectedDeliveryOption = e.target.value;
+                        
+                        if (this.selectedDeliveryOption === 'delivery') {
+                            deliveryCalculator.style.display = 'block';
+                        } else {
+                            deliveryCalculator.style.display = 'none';
+                            this.deliveryCost = 0;
+                            this.updateSummary();
+                        }
+                    });
+                });
+            }
+
+            renderCart() {
+                const cartItems = document.getElementById('cartItems');
+                const emptyCart = document.getElementById('emptyCart');
+                
+                if (store.cart.length === 0) {
+                    cartItems.innerHTML = '';
+                    emptyCart.style.display = 'block';
+                    return;
+                }
+                
+                emptyCart.style.display = 'none';
+                
+                cartItems.innerHTML = store.cart.map(item => `
+                    <div class="cart-item" data-id="${item.id}">
+                        <div class="cart-item-image">
+                            <i class="fas fa-${this.getItemIcon(item.name)}"></i>
+                        </div>
+                        <div class="cart-item-details">
+                            <h3 class="cart-item-title">${item.name}</h3>
+                            <div class="cart-item-lead-time">Lead time: ${store.formatLeadTime(item.leadTime)}</div>
+                            <div class="cart-item-price">${store.formatPrice(item.price)}</div>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <button class="quantity-btn" onclick="cartPage.updateQuantity('${item.id}', ${item.quantity - 1})">-</button>
+                            <input type="number" class="quantity-input" value="${item.quantity}" min="1" onchange="cartPage.updateQuantity('${item.id}', this.value)">
+                            <button class="quantity-btn" onclick="cartPage.updateQuantity('${item.id}', ${item.quantity + 1})">+</button>
+                        </div>
+                        <button class="cart-item-remove" onclick="cartPage.removeItem('${item.id}')">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+
+            getItemIcon(itemName) {
+                // Simple icon mapping based on product name
+                if (itemName.toLowerCase().includes('blind')) return 'sliders-h';
+                if (itemName.toLowerCase().includes('curtain')) return 'columns';
+                if (itemName.toLowerCase().includes('floor')) return 'th-large';
+                if (itemName.toLowerCase().includes('wallpaper')) return 'image';
+                if (itemName.toLowerCase().includes('headboard')) return 'bed';
+                if (itemName.toLowerCase().includes('pedestal')) return 'table';
+                if (itemName.toLowerCase().includes('sofa')) return 'couch';
+                if (itemName.toLowerCase().includes('cushion')) return 'square';
+                if (itemName.toLowerCase().includes('gate')) return 'shield-alt';
+                return 'box';
+            }
+
+            updateQuantity(productId, newQuantity) {
+                const quantity = parseInt(newQuantity);
+                if (quantity >= 1) {
+                    store.updateQuantity(productId, quantity);
+                    this.renderCart();
+                    this.updateSummary();
+                }
+            }
+
+            removeItem(productId) {
+                store.removeFromCart(productId);
+                this.renderCart();
+                this.updateSummary();
+                
+                if (store.cart.length === 0) {
+                    store.showNotification('Cart is empty', 'info');
+                }
+            }
+
+            calculateDelivery() {
+                const postcodeInput = document.getElementById('cartPostcode');
+                const resultDiv = document.getElementById('deliveryResult');
+                
+                const postcode = postcodeInput.value.trim();
+                
+                if (!postcode || postcode.length !== 4 || !/^\d{4}$/.test(postcode)) {
+                    resultDiv.innerHTML = '<p class="error" style="color: var(--kayleigh-danger); font-size: 0.8rem;">Please enter a valid 4-digit postcode</p>';
+                    return;
+                }
+
+                resultDiv.innerHTML = '<p class="loading" style="color: var(--kayleigh-light-grey); font-size: 0.8rem;">Calculating...</p>';
+
+                // Use the same shipping calculation as the shop page
+                const distance = store.calculateApproximateDistance ? 
+                    store.calculateApproximateDistance(postcode) : 
+                    this.calculateApproximateDistance(postcode);
+                
+                const cost = store.calculateShippingCost ? 
+                    store.calculateShippingCost(distance) : 
+                    this.calculateShippingCost(distance);
+                
+                this.deliveryCost = cost;
+                
+                resultDiv.innerHTML = `
+                    <div class="delivery-result" style="font-size: 0.8rem; margin-top: 0.5rem;">
+                        <p><strong>Distance:</strong> ~${Math.round(distance)} km from East London</p>
+                        <p><strong>Cost:</strong> ${cost === 0 ? 'FREE' : store.formatPrice(cost)}</p>
+                        <p><strong>Delivery time:</strong> ${this.getDeliveryTime(distance)}</p>
+                    </div>
+                `;
+                
+                this.updateSummary();
+                
+                // Update the delivery cost display in the summary
+                document.getElementById('deliveryCost').textContent = cost === 0 ? 'FREE' : store.formatPrice(cost);
+            }
+
+            calculateApproximateDistance(postcode) {
+                // Same logic as in main.js
+                const eastLondonPostcode = 5201;
+                const inputPostcode = parseInt(postcode);
+                const baseDistance = Math.abs(inputPostcode - eastLondonPostcode);
+                
+                if (postcode.startsWith('8')) {
+                    return Math.max(baseDistance * 8, 800);
+                } else if (postcode.startsWith('2')) {
+                    return Math.max(baseDistance * 6, 600);
+                } else if (postcode.startsWith('4')) {
+                    return Math.max(baseDistance * 3, 300);
+                } else if (postcode.startsWith('6')) {
+                    return Math.max(baseDistance * 2, 100);
+                } else {
+                    return Math.max(baseDistance * 5, 200);
+                }
+            }
+
+            calculateShippingCost(distance) {
+                if (distance <= 40) {
+                    return 0;
+                } else if (distance <= 100) {
+                    return distance * 8;
+                } else if (distance <= 400) {
+                    return distance * 6;
+                } else {
+                    return Math.min(distance * 5, 1200);
+                }
+            }
+
+            getDeliveryTime(distance) {
+                if (distance <= 40) {
+                    return '2-5 working days';
+                } else if (distance <= 100) {
+                    return '3-7 working days';
+                } else if (distance <= 400) {
+                    return '5-10 working days';
+                } else {
+                    return '7-14 working days';
+                }
+            }
+
+            updateSummary() {
+                const subtotal = store.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                const vat = subtotal * 0.15; // 15% VAT
+                const total = subtotal + vat + this.deliveryCost;
+                
+                document.getElementById('cartSubtotal').textContent = store.formatPrice(subtotal);
+                document.getElementById('vatAmount').textContent = store.formatPrice(vat);
+                document.getElementById('cartTotal').textContent = store.formatPrice(total);
+                document.getElementById('deliveryFee').textContent = store.formatPrice(this.deliveryCost);
+                
+                // Update checkout button state
+                const checkoutBtn = document.getElementById('checkoutBtn');
+                if (store.cart.length === 0) {
+                    checkoutBtn.disabled = true;
+                    checkoutBtn.textContent = 'Cart is Empty';
+                } else {
+                    checkoutBtn.disabled = false;
+                    checkoutBtn.textContent = 'Proceed to Checkout';
+                }
+            }
+
+            proceedToCheckout() {
+                if (store.cart.length === 0) {
+                    store.showNotification('Your cart is empty', 'error');
+                    return;
+                }
+                
+                if (this.selectedDeliveryOption === 'delivery' && this.deliveryCost === 0) {
+                    store.showNotification('Please calculate your delivery cost first', 'warning');
+                    return;
+                }
+                
+                // Save delivery information
+                localStorage.setItem('deliveryOption', this.selectedDeliveryOption);
+                localStorage.setItem('deliveryCost', this.deliveryCost.toString());
+                
+                // Redirect to checkout
+                window.location.href = 'checkout.html';
+            }
+        }
+
+        // Initialize cart page
+        let cartPage;
+        document.addEventListener('DOMContentLoaded', () => {
+            cartPage = new CartPage();
+        });
+    </script>
+</body>
+</html>
